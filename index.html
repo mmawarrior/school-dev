@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Include Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <!-- image slider and library css code -->
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="agenda.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/css/themes/splide-skyblue.min.css"
+  />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/js/splide.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+
+  <title>University of Tokyo</title>
+
+<!-- <script src="navbar.js"></script> -->
+ </head>
+<body>
+     <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="./logo/University2.png" alt="Company Logo">
+        </div>
+        <div class="navbar-toggle" id="navbarToggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="navbar-links" id="navbarLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#academics">Academics</a></li>
+            <li><a href="#library">Library</a></li>
+            <li><a href="#community">Community</a></li>
+            <li><a href="#agenda">Agenda</a></li>
+            <li><a href="#testimonial">Testimonial</a></li>
+        </ul>
+    </nav>
+    </nav>
+
+<div class="content">
+        <!-- Home Page Content -->
+        <div class="home" id="home">
+
+    <div class="image-container">
+        <!-- Image -->
+   <img src="img/school.jpg" alt="Your Image Description"> 
+            <h1 class="welcome-text">Welcome to University of Tokyo</h1>
+
+        <!-- Button overlay -->
+        <button class="button-overlay" onclick="handleButtonClick()">Click me!</button>
+
+        <div class="Academy purposes">
+            <!-- YouTube video embed iframe -->
+          <h1>Academy Purposes</h1>
+           <!-- Container for the video and image -->
+    <div class="video-container">
+        <!-- Image -->
+              <!-- Overlay with YouTube video -->
+        <div class="video-overlay">
+            <!-- YouTube video embed iframe -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen
+            ></iframe>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <section class="academy-purposes">
+        <div class="purpose">
+            <img src="./icons/executive-person.svg" alt="Tomorrow's-Leader-Icon">
+            <p class="custom-text">Tomorrow's Leader</p>
+            <p class="custom-paragraph">Empowered through academics, athletics, community service, outdoor education, and more, Chargers forge their path as leaders.</p>
+
+        </div>
+    
+        <div class="purpose">
+            <img src="./icons/world-symbol.svg" alt="World-Globe-Icon">
+            <p class="custom-text">A World Globe</p>
+            <p class="custom-paragraph">From grade to grade, Chargers engage in impactful community service. In 2022-23 alone, our community logged over 11,000 service hours.</p>
+
+        </div>
+    
+        <div class="purpose">
+            <img src="./icons/hands-pray.svg" alt="Love-Icon">
+            <p class="custom-text">Love that says strong bond that lasts.</p>
+            <p class="custom-paragraph">Academy life is a journey of building lasting connections with peers and mentors – bonds woven with care, laughter, and shared experiences.</p>
+        </div> 
+        <!-- Add more purposes as needed -->
+    </section>
+
+    <section id="main-slider" class="splide" aria-label="My Awesome Gallery">
+        <div class="splide__track">
+          <h1>Image Slider</h1>
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <img
+                src="https://source.unsplash.com/random/1000x1000?sig=1"
+                alt=""
+              />
+            </li>
+            <li class="splide__slide">
+              <img src="https://source.unsplash.com/random/1000x1000?sig=2"
+                alt=""
+              />
+            </li>
+            <li class="splide__slide">
+              <img
+                src="https://source.unsplash.com/random/1000x1000?sig=3"
+                alt=""
+              />
+            </li>
+            <li class="splide__slide">
+              <img
+                src="./img/run2.jpg"
+                alt=""
+              />
+            </li>
+          </ul>
+        </div>
+      </section>
+  
+      <ul id="thumbnails" class="thumbnails">
+        <li class="thumbnail">
+          <img src="https://source.unsplash.com/random/1000x1000?sig=1" alt="" />
+        </li>
+        <li class="thumbnail">
+          <img src="https://source.unsplash.com/random/1000x1000?sig=2" alt="" />
+        </li>
+        <li class="thumbnail">
+          <img src="https://source.unsplash.com/random/1000x1000?sig=3" alt="" />
+        </li>
+        <li class="thumbnail">
+          <img src="./img/run2.jpg" alt="" />
+        </li>
+      </ul>
+      </div>
+
+    <!-- Academics Page Content -->
+    <div class="academics-page hidden" id="academics">
+        <h1>Academics</h1>
+        <p>Explore our academic programs and courses.</p>
+    </div>
+
+    <!-- Library Page Content -->
+    <div class="library-page hidden" id="library">
+        <h1>Library App</h1>
+        <div class="library-container">
+
+        <form id="addBookForm">
+            <label for="title">Title:</label>
+            <input type="text" id="title" required>     
+            <label for="author">Author:</label>
+            <input type="text" id="author" required>
+            <label for="isbn">ISBN:</label>
+            <input type="text" id="isbn" required>
+            <button type="button" id="addBookButton" class="add-book-btn">Add Book</button>
+        </form>
+        
+        <!-- Book list -->
+        <ul id="bookList"></ul>
+        </div>
+    </div>
+
+    <!-- Community Page Content -->
+    <div class="community-page hidden" id="community">
+      <h1>Community</h1>
+        <p>Engage with our vibrant student community.</p>
+    </div>
+
+    <!-- Agenda Page Content -->
+    <div class="agenda-page hidden" id="agenda">
+        <h1>Agenda</h1>
+        <div class="wrapper">
+          <div class="container-calendar">
+              <div id="left">
+                  <h1>Dynamic Calendar</h1>
+                  <div id="event-section">
+                      <h3>Add Event</h3>
+                      <input type="date" id="eventDate">
+                      <input type="text"
+                          id="eventTitle"
+                          placeholder="Event Title">
+                      <input type="text"
+                          id="eventDescription"
+                          placeholder="Event Description">
+                      <button id="addEvent" onclick="addEvent()">
+                          Add
+                      </button>
+                  </div>
+                  <div id="reminder-section">
+                      <h3>Reminders</h3>
+                      <!-- List to display reminders -->
+                      <ul id="reminderList">
+                          <li data-event-id="1">
+                              <strong>Event Title</strong>
+                              - Event Description on Event Date
+                              <button class="delete-event"
+                                  onclick="deleteEvent(1)">
+                                  Delete
+                              </button>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <div id="right">
+                  <h3 id="monthAndYear"></h3>
+                  <div class="button-container-calendar">
+                      <button id="previous"
+                              onclick="previous()">
+                            ‹
+                        </button>
+                      <button id="next"
+                              onclick="next()">
+                            ›
+                        </button>
+                  </div>
+                  <table class="table-calendar"
+                         id="calendar"
+                         data-lang="en">
+                      <thead id="thead-month"></thead>
+                      <!-- Table body for displaying the calendar -->
+                      <tbody id="calendar-body"></tbody>
+                  </table>
+                  <div class="footer-container-calendar">
+                      <label for="month">Jump To: </label>
+                      <!-- Dropdowns to select a specific month and year -->
+                      <select id="month" onchange="jump()">
+                          <option value=0>Jan</option>
+                          <option value=1>Feb</option>
+                          <option value=2>Mar</option>
+                          <option value=3>Apr</option>
+                          <option value=4>May</option>
+                          <option value=5>Jun</option>
+                          <option value=6>Jul</option>
+                          <option value=7>Aug</option>
+                          <option value=8>Sep</option>
+                          <option value=9>Oct</option>
+                          <option value=10>Nov</option>
+                          <option value=11>Dec</option>
+                      </select>
+                      <!-- Dropdown to select a specific year -->
+                      <select id="year" onchange="jump()"></select>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Testimonial Page Content -->
+    <div class="testimonial-page hidden" id="testimonial">
+        <h1>Testimonials</h1>
+        <div class="testimonial">
+            <p>"I love studying at this school. The faculty is amazing, and the community is supportive."</p>
+            <p class="author">- John Doe, Bachelor Student</p>
+        </div>
+        <div class="testimonial">
+            <p>"The library resources are fantastic, and the academic programs are well-designed."</p>
+            <p class="author">- Jane Smith, Master's Student</p>
+        </div>
+    </div>
+</div>
+</div>
+<footer class="academy-footer">
+    <div class="footer-content">
+        <p>&copy; 2023 Your School Academy. All rights reserved.</p>
+        <p>Contact us: info@yourschoolacademy.com</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="library.js"></script>
+<script src="slider.js"></script>
+<script src="agenda.js"></script>
+</body>
+</html>
