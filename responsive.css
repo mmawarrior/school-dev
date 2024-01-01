@@ -45,13 +45,7 @@
         height: 100%;
     }
 
-    #welcome-text {
-        font-size: 10px;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-        text-align: center; /* Center the text */
-    }
-
-    .academy-purposes {
+     .academy-purposes {
         flex-direction: column;
         text-align: center;
     }
@@ -59,6 +53,10 @@
     .purpose img {
         margin-bottom: 10px;
     }
+    .ClickButton {
+        font-size: 0.5em;
+    }
+  
 }
 
 /* Media Query for Responsive Design */
@@ -86,31 +84,31 @@
         display: block;
     }
     
+    .image-container {
+        text-align: center; /* Center the text in the container */
+    }
+
+   .text-container {
+        width: 100%; /* Adjust the width as needed for smaller screens */
+    }
+
     .welcome-text {
-        font-size: 24px; /* Adjust the font size as needed */
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-        text-align: center;
+        font-size: 1.5em;
     }
-    .button-overlay {
+
+    .ClickButton {
+        font-size: 1em;
         position: absolute;
-        top: 30%; /* Center vertically */
-        left: 50%; /* Center horizontally */
+        top: 70%; /* Adjust the top positioning as needed */
+        left: 50%;
         transform: translate(-50%, -50%);
-        padding: 10px 20px;
-        font-size: 14px; /* Adjust font size for mobile */
-        background-color: #fff;
-        color: #333;
-        border: 1px solid #333;
-        cursor: pointer;
-        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        display: flex;
+        font-weight: 900;
+        justify-content: center;
     }
 
-    .button-overlay:hover {
-        background-color: #333;
-        color: #fff;
-    }
 
-    /* Agenda */
+/* Agenda */
  #right {
     width: 100%; /* Make both sections take full width */
 }
@@ -122,6 +120,4 @@
     width: 100%; /* Both sections take full width on smaller screens */
 }
     
-}
-
 }
