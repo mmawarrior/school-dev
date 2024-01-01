@@ -121,7 +121,15 @@ h1 {
         transform: translate(-50%, -50%);
         display: flex;
         justify-content: center;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
     }
+    
+    .ClickButton:hover {
+        background-color: #04111e;
+        color: #fff;
+    }
+
 
  /* footer */
 .academy-footer {
@@ -149,7 +157,6 @@ iframe {
     top: 0;
     left: 0;
 }
-
 
 .academy-purposes {
     display: flex;
